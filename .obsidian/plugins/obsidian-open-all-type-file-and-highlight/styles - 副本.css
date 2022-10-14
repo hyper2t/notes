@@ -1,0 +1,1228 @@
+.yll-code-file-type textarea {
+  height: calc(15vh);
+}
+
+
+
+
+
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+
+
+.yll-code-coy code[class*="language-"],
+.yll-code-coy pre[class*="language-"] {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-coy pre[class*="language-"] {
+  position: relative;
+  margin: 0.5em 0;
+  overflow: visible;
+  padding: 1px;
+}
+
+.yll-code-coy pre[class*="language-"]>code {
+  position: relative;
+  z-index: 1;
+  border-left: 10px solid #358ccb;
+  box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+  background-color: #fdfdfd;
+  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  background-attachment: local;
+}
+
+.yll-code-coy code[class*="language-"] {
+  max-height: inherit;
+  height: inherit;
+  padding: 0 1em;
+  display: block;
+  overflow: auto;
+}
+
+.yll-code-coy :not(pre)>code[class*="language-"],
+.yll-code-coy pre[class*="language-"] {
+  background-color: #fdfdfd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.yll-code-coy :not(pre)>code[class*="language-"] {
+  position: relative;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  color: #c92c2c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline;
+  white-space: normal;
+}
+
+.yll-code-coy pre[class*="language-"]:before,
+.yll-code-coy pre[class*="language-"]:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0.75em;
+  left: 0.18em;
+  width: 40%;
+  height: 20%;
+  max-height: 13em;
+  box-shadow: 0px 13px 8px #979797;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.yll-code-coy pre[class*="language-"]:after {
+  right: 0.75em;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.yll-code-coy .token.comment,
+.yll-code-coy .token.block-comment,
+.yll-code-coy .token.prolog,
+.yll-code-coy .token.doctype,
+.yll-code-coy .token.cdata {
+  color: #7D8B99;
+}
+
+.yll-code-coy .token.punctuation {
+  color: #5F6364;
+}
+
+.yll-code-coy .token.property,
+.yll-code-coy .token.tag,
+.yll-code-coy .token.boolean,
+.yll-code-coy .token.number,
+.yll-code-coy .token.function-name,
+.yll-code-coy .token.constant,
+.yll-code-coy .token.symbol,
+.yll-code-coy .token.deleted {
+  color: #c92c2c;
+}
+
+.yll-code-coy .token.selector,
+.yll-code-coy .token.attr-name,
+.yll-code-coy .token.string,
+.yll-code-coy .token.char,
+.yll-code-coy .token.function,
+.yll-code-coy .token.builtin,
+.yll-code-coy .token.inserted {
+  color: #2f9c0a;
+}
+
+.yll-code-coy .token.operator,
+.yll-code-coy .token.entity,
+.yll-code-coy .token.url,
+.yll-code-coy .token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.yll-code-coy .token.atrule,
+.yll-code-coy .token.attr-value,
+.yll-code-coy .token.keyword,
+.yll-code-coy .token.class-name {
+  color: #1990b8;
+}
+
+.yll-code-coy .token.regex,
+.yll-code-coy .token.important {
+  color: #e90;
+}
+
+.yll-code-coy .language-css .token.string,
+.yll-code-coy .style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.yll-code-coy .token.important {
+  font-weight: normal;
+}
+
+.yll-code-coy .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-coy .token.italic {
+  font-style: italic;
+}
+
+.yll-code-coy .token.entity {
+  cursor: help;
+}
+
+.yll-code-coy .token.namespace {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+
+  .yll-code-coy pre[class*="language-"]:before,
+  .yll-code-coy pre[class*="language-"]:after {
+    bottom: 14px;
+    box-shadow: none;
+  }
+}
+
+.yll-code-coy pre[class*="language-"].line-numbers.line-numbers {
+  padding-left: 0;
+}
+
+.yll-code-coy pre[class*="language-"].line-numbers.line-numbers code {
+  padding-left: 3.8em;
+}
+
+.yll-code-coy pre[class*="language-"].line-numbers.line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+.yll-code-coy pre[class*="language-"][data-line] {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.yll-code-coy pre[data-line] code {
+  position: relative;
+  padding-left: 4em;
+}
+
+.yll-code-coy pre .line-highlight {
+  margin-top: 0;
+}
+
+
+
+/**
+ * prism.js Funky theme
+ * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
+ * @author Lea Verou
+ */
+
+
+.yll-code-funky code[class*="language-"],
+.yll-code-funky pre[class*="language-"] {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-funky pre[class*="language-"] {
+  padding: 0.4em 0.8em;
+  margin: 0.5em 0;
+  overflow: auto;
+  background: url('data:image/svg+xml;charset=utf-8,<svg%20version%3D"1.1"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"100"%20height%3D"100"%20fill%3D"rgba(0%2C0%2C0%2C.2)">%0D%0A<polygon%20points%3D"0%2C50%2050%2C0%200%2C0"%20%2F>%0D%0A<polygon%20points%3D"0%2C100%2050%2C100%20100%2C50%20100%2C0"%20%2F>%0D%0A<%2Fsvg>');
+  background-size: 1em 1em;
+}
+
+.yll-code-funky code[class*="language-"] {
+  background: black;
+  color: white;
+  box-shadow: -0.3em 0 0 0.3em black, 0.3em 0 0 0.3em black;
+}
+
+.yll-code-funky :not(pre)>code[class*="language-"] {
+  padding: 0.2em;
+  border-radius: 0.3em;
+  box-shadow: none;
+  white-space: normal;
+}
+
+.yll-code-funky .token.comment,
+.yll-code-funky .token.prolog,
+.yll-code-funky .token.doctype,
+.yll-code-funky .token.cdata {
+  color: #aaa;
+}
+
+.yll-code-funky .token.punctuation {
+  color: #999;
+}
+
+.yll-code-funky .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-funky .token.property,
+.yll-code-funky .token.tag,
+.yll-code-funky .token.boolean,
+.yll-code-funky .token.number,
+.yll-code-funky .token.constant,
+.yll-code-funky .token.symbol {
+  color: #0cf;
+}
+
+.yll-code-funky .token.selector,
+.yll-code-funky .token.attr-name,
+.yll-code-funky .token.string,
+.yll-code-funky .token.char,
+.yll-code-funky .token.builtin {
+  color: yellow;
+}
+
+.yll-code-funky .token.operator,
+.yll-code-funky .token.entity,
+.yll-code-funky .token.url,
+.yll-code-funky .language-css .token.string,
+.yll-code-funky .token.variable,
+.yll-code-funky .token.inserted {
+  color: yellowgreen;
+}
+
+.yll-code-funky .token.atrule,
+.yll-code-funky .token.attr-value,
+.yll-code-funky .token.keyword {
+  color: deeppink;
+}
+
+.yll-code-funky .token.regex,
+.yll-code-funky .token.important {
+  color: orange;
+}
+
+.yll-code-funky .token.important,
+.yll-code-funky .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-funky .token.italic {
+  font-style: italic;
+}
+
+.yll-code-funky .token.entity {
+  cursor: help;
+}
+
+.yll-code-funky .token.deleted {
+  color: red;
+}
+
+.yll-code-funky pre.diff-highlight.diff-highlight>code .token.deleted:not(.prefix),
+.yll-code-funky pre>code.diff-highlight.diff-highlight .token.deleted:not(.prefix) {
+  background-color: rgba(255, 0, 0, 0.3);
+  display: inline;
+}
+
+.yll-code-funky pre.diff-highlight.diff-highlight>code .token.inserted:not(.prefix),
+.yll-code-funky pre>code.diff-highlight.diff-highlight .token.inserted:not(.prefix) {
+  background-color: rgba(0, 255, 128, 0.3);
+  display: inline;
+}
+
+
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+
+.yll-code-okaidia code[class*="language-"],
+.yll-code-okaidia pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-okaidia pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+.yll-code-okaidia :not(pre)>code[class*="language-"],
+.yll-code-okaidia pre[class*="language-"] {
+  background: #272822;
+}
+
+.yll-code-okaidia :not(pre)>code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.yll-code-okaidia .token.comment,
+.yll-code-okaidia .token.prolog,
+.yll-code-okaidia .token.doctype,
+.yll-code-okaidia .token.cdata {
+  color: #8292a2;
+}
+
+.yll-code-okaidia .token.punctuation {
+  color: #f8f8f2;
+}
+
+.yll-code-okaidia .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-okaidia .token.property,
+.yll-code-okaidia .token.tag,
+.yll-code-okaidia .token.constant,
+.yll-code-okaidia .token.symbol,
+.yll-code-okaidia .token.deleted {
+  color: #f92672;
+}
+
+.yll-code-okaidia .token.boolean,
+.yll-code-okaidia .token.number {
+  color: #ae81ff;
+}
+
+.yll-code-okaidia .token.selector,
+.yll-code-okaidia .token.attr-name,
+.yll-code-okaidia .token.string,
+.yll-code-okaidia .token.char,
+.yll-code-okaidia .token.builtin,
+.yll-code-okaidia .token.inserted {
+  color: #a6e22e;
+}
+
+.yll-code-okaidia .token.operator,
+.yll-code-okaidia .token.entity,
+.yll-code-okaidia .token.url,
+.yll-code-okaidia .language-css .token.string,
+.yll-code-okaidia .style .token.string,
+.yll-code-okaidia .token.variable {
+  color: #f8f8f2;
+}
+
+.yll-code-okaidia .token.atrule,
+.yll-code-okaidia .token.attr-value,
+.yll-code-okaidia .token.function,
+.yll-code-okaidia .token.class-name {
+  color: #e6db74;
+}
+
+.yll-code-okaidia .token.keyword {
+  color: #66d9ef;
+}
+
+.yll-code-okaidia .token.regex,
+.yll-code-okaidia .token.important {
+  color: #fd971f;
+}
+
+.yll-code-okaidia .token.important,
+.yll-code-okaidia .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-okaidia .token.italic {
+  font-style: italic;
+}
+
+.yll-code-okaidia .token.entity {
+  cursor: help;
+}
+
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+.yll-code-orgin code[class*="language-"],
+.yll-code-orgin pre[class*="language-"] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-orgin pre[class*="language-"]::-moz-selection,
+.yll-code-orgin pre[class*="language-"] ::-moz-selection,
+.yll-code-orgin code[class*="language-"]::-moz-selection,
+.yll-code-orgin code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.yll-code-orgin pre[class*="language-"]::selection,
+.yll-code-orgin pre[class*="language-"] ::selection,
+.yll-code-orgin code[class*="language-"]::selection,
+.yll-code-orgin code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+
+  .yll-code-orgin code[class*="language-"],
+  .yll-code-orgin pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+.yll-code-orgin pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+.yll-code-orgin :not(pre)>code[class*="language-"],
+.yll-code-orgin pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+.yll-code-orgin :not(pre)>code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.yll-code-orgin .token.comment,
+.yll-code-orgin .token.prolog,
+.yll-code-orgin .token.doctype,
+.yll-code-orgin .token.cdata {
+  color: slategray;
+}
+
+.yll-code-orgin .token.punctuation {
+  color: #999;
+}
+
+.yll-code-orgin .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-orgin .token.property,
+.yll-code-orgin .token.tag,
+.yll-code-orgin .token.boolean,
+.yll-code-orgin .token.number,
+.yll-code-orgin .token.constant,
+.yll-code-orgin .token.symbol,
+.yll-code-orgin .token.deleted {
+  color: #905;
+}
+
+.yll-code-orgin .token.selector,
+.yll-code-orgin .token.attr-name,
+.yll-code-orgin .token.string,
+.yll-code-orgin .token.char,
+.yll-code-orgin .token.builtin,
+.yll-code-orgin .token.inserted {
+  color: #690;
+}
+
+.yll-code-orgin .token.operator,
+.yll-code-orgin .token.entity,
+.yll-code-orgin .token.url,
+.yll-code-orgin .language-css .token.string,
+.yll-code-orgin .style .token.string {
+  color: #9a6e3a;
+  /* This background color was intended by the author of this theme. */
+  background: hsla(0, 0%, 100%, 0.5);
+}
+
+.yll-code-orgin .token.atrule,
+.yll-code-orgin .token.attr-value,
+.yll-code-orgin .token.keyword {
+  color: #07a;
+}
+
+.yll-code-orgin .token.function,
+.yll-code-orgin .token.class-name {
+  color: #DD4A68;
+}
+
+.yll-code-orgin .token.regex,
+.yll-code-orgin .token.important,
+.yll-code-orgin .token.variable {
+  color: #e90;
+}
+
+.yll-code-orgin .token.important,
+.yll-code-orgin .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-orgin .token.italic {
+  font-style: italic;
+}
+
+.yll-code-orgin .token.entity {
+  cursor: help;
+}
+
+
+/*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+/*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+.yll-code-solarizedlight code[class*="language-"],
+.yll-code-solarizedlight pre[class*="language-"] {
+  color: #657b83;
+  /* base00 */
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-solarizedlight pre[class*="language-"]::-moz-selection,
+.yll-code-solarizedlight pre[class*="language-"] ::-moz-selection,
+.yll-code-solarizedlight code[class*="language-"]::-moz-selection,
+.yll-code-solarizedlight code[class*="language-"] ::-moz-selection {
+  background: #073642;
+  /* base02 */
+}
+
+.yll-code-solarizedlight pre[class*="language-"]::selection,
+.yll-code-solarizedlight pre[class*="language-"] ::selection,
+.yll-code-solarizedlight code[class*="language-"]::selection,
+.yll-code-solarizedlight code[class*="language-"] ::selection {
+  background: #073642;
+  /* base02 */
+}
+
+.yll-code-solarizedlight pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+.yll-code-solarizedlight :not(pre)>code[class*="language-"],
+.yll-code-solarizedlight pre[class*="language-"] {
+  background-color: #fdf6e3;
+  /* base3 */
+}
+
+.yll-code-solarizedlight :not(pre)>code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+}
+
+.yll-code-solarizedlight .token.comment,
+.yll-code-solarizedlight .token.prolog,
+.yll-code-solarizedlight .token.doctype,
+.yll-code-solarizedlight .token.cdata {
+  color: #93a1a1;
+  /* base1 */
+}
+
+.yll-code-solarizedlight .token.punctuation {
+  color: #586e75;
+  /* base01 */
+}
+
+.yll-code-solarizedlight .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-solarizedlight .token.property,
+.yll-code-solarizedlight .token.tag,
+.yll-code-solarizedlight .token.boolean,
+.yll-code-solarizedlight .token.number,
+.yll-code-solarizedlight .token.constant,
+.yll-code-solarizedlight .token.symbol,
+.yll-code-solarizedlight .token.deleted {
+  color: #268bd2;
+  /* blue */
+}
+
+.yll-code-solarizedlight .token.selector,
+.yll-code-solarizedlight .token.attr-name,
+.yll-code-solarizedlight .token.string,
+.yll-code-solarizedlight .token.char,
+.yll-code-solarizedlight .token.builtin,
+.yll-code-solarizedlight .token.url,
+.yll-code-solarizedlight .token.inserted {
+  color: #2aa198;
+  /* cyan */
+}
+
+.yll-code-solarizedlight .token.entity {
+  color: #657b83;
+  /* base00 */
+  background: #eee8d5;
+  /* base2 */
+}
+
+.yll-code-solarizedlight .token.atrule,
+.yll-code-solarizedlight .token.attr-value,
+.yll-code-solarizedlight .token.keyword {
+  color: #859900;
+  /* green */
+}
+
+.yll-code-solarizedlight .token.function,
+.yll-code-solarizedlight .token.class-name {
+  color: #b58900;
+  /* yellow */
+}
+
+.yll-code-solarizedlight .token.regex,
+.yll-code-solarizedlight .token.important,
+.yll-code-solarizedlight .token.variable {
+  color: #cb4b16;
+  /* orange */
+}
+
+.yll-code-solarizedlight .token.important,
+.yll-code-solarizedlight .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-solarizedlight .token.italic {
+  font-style: italic;
+}
+
+.yll-code-solarizedlight .token.entity {
+  cursor: help;
+}
+
+
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+
+.yll-code-tomorrow code[class*="language-"],
+.yll-code-tomorrow pre[class*="language-"] {
+  color: #ccc;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-tomorrow pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+.yll-code-tomorrow :not(pre)>code[class*="language-"],
+.yll-code-tomorrow pre[class*="language-"] {
+  background: #2d2d2d;
+}
+
+.yll-code-tomorrow :not(pre)>code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.yll-code-tomorrow .token.comment,
+.yll-code-tomorrow .token.block-comment,
+.yll-code-tomorrow .token.prolog,
+.yll-code-tomorrow .token.doctype,
+.yll-code-tomorrow .token.cdata {
+  color: #999;
+}
+
+.yll-code-tomorrow .token.punctuation {
+  color: #ccc;
+}
+
+.yll-code-tomorrow .token.tag,
+.yll-code-tomorrow .token.attr-name,
+.yll-code-tomorrow .token.namespace,
+.yll-code-tomorrow .token.deleted {
+  color: #e2777a;
+}
+
+.yll-code-tomorrow .token.function-name {
+  color: #6196cc;
+}
+
+.yll-code-tomorrow .token.boolean,
+.yll-code-tomorrow .token.number,
+.yll-code-tomorrow .token.function {
+  color: #f08d49;
+}
+
+.yll-code-tomorrow .token.property,
+.yll-code-tomorrow .token.class-name,
+.yll-code-tomorrow .token.constant,
+.yll-code-tomorrow .token.symbol {
+  color: #f8c555;
+}
+
+.yll-code-tomorrow .token.selector,
+.yll-code-tomorrow .token.important,
+.yll-code-tomorrow .token.atrule,
+.yll-code-tomorrow .token.keyword,
+.yll-code-tomorrow .token.builtin {
+  color: #cc99cd;
+}
+
+.yll-code-tomorrow .token.string,
+.yll-code-tomorrow .token.char,
+.yll-code-tomorrow .token.attr-value,
+.yll-code-tomorrow .token.regex,
+.yll-code-tomorrow .token.variable {
+  color: #7ec699;
+}
+
+.yll-code-tomorrow .token.operator,
+.yll-code-tomorrow .token.entity,
+.yll-code-tomorrow .token.url {
+  color: #67cdcc;
+}
+
+.yll-code-tomorrow .token.important,
+.yll-code-tomorrow .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-tomorrow .token.italic {
+  font-style: italic;
+}
+
+.yll-code-tomorrow .token.entity {
+  cursor: help;
+}
+
+.yll-code-tomorrow .token.inserted {
+  color: green;
+}
+
+/**
+ * prism.js Twilight theme
+ * Based (more or less) on the Twilight theme originally of Textmate fame.
+ * @author Remy Bach
+ */
+
+.yll-code-twilight code[class*="language-"],
+.yll-code-twilight pre[class*="language-"] {
+  color: white;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  text-shadow: 0 -0.1em 0.2em black;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.yll-code-twilight pre[class*="language-"],
+.yll-code-twilight :not(pre)>code[class*="language-"] {
+  background: hsl(0, 0%, 8%);
+  /* #141414 */
+}
+
+.yll-code-twilight pre[class*="language-"] {
+  border-radius: 0.5em;
+  border: 0.3em solid hsl(0, 0%, 33%);
+  /* #282A2B */
+  box-shadow: 1px 1px 0.5em black inset;
+  margin: 0.5em 0;
+  overflow: auto;
+  padding: 1em;
+}
+
+.yll-code-twilight pre[class*="language-"]::-moz-selection {
+  /* Firefox */
+  background: hsl(200, 4%, 16%);
+  /* #282A2B */
+}
+
+.yll-code-twilight pre[class*="language-"]::selection {
+  /* Safari */
+  background: hsl(200, 4%, 16%);
+  /* #282A2B */
+}
+
+.yll-code-twilight pre[class*="language-"]::-moz-selection,
+.yll-code-twilight pre[class*="language-"] ::-moz-selection,
+.yll-code-twilight code[class*="language-"]::-moz-selection,
+.yll-code-twilight code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 93%, 0.15);
+  /* #EDEDED */
+}
+
+.yll-code-twilight pre[class*="language-"]::selection,
+.yll-code-twilight pre[class*="language-"] ::selection,
+.yll-code-twilight code[class*="language-"]::selection,
+.yll-code-twilight code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 93%, 0.15);
+  /* #EDEDED */
+}
+
+.yll-code-twilight :not(pre)>code[class*="language-"] {
+  border-radius: 0.3em;
+  border: 0.13em solid hsl(0, 0%, 33%);
+  /* #545454 */
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+}
+
+.yll-code-twilight .token.comment,
+.yll-code-twilight .token.prolog,
+.yll-code-twilight .token.doctype,
+.yll-code-twilight .token.cdata {
+  color: hsl(0, 0%, 47%);
+  /* #777777 */
+}
+
+.yll-code-twilight .token.punctuation {
+  opacity: 0.7;
+}
+
+.yll-code-twilight .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-twilight .token.tag,
+.yll-code-twilight .token.boolean,
+.yll-code-twilight .token.number,
+.yll-code-twilight .token.deleted {
+  color: hsl(14, 58%, 55%);
+  /* #CF6A4C */
+}
+
+.yll-code-twilight .token.keyword,
+.yll-code-twilight .token.property,
+.yll-code-twilight .token.selector,
+.yll-code-twilight .token.constant,
+.yll-code-twilight .token.symbol,
+.yll-code-twilight .token.builtin {
+  color: hsl(53, 89%, 79%);
+  /* #F9EE98 */
+}
+
+.yll-code-twilight .token.attr-name,
+.yll-code-twilight .token.attr-value,
+.yll-code-twilight .token.string,
+.yll-code-twilight .token.char,
+.yll-code-twilight .token.operator,
+.yll-code-twilight .token.entity,
+.yll-code-twilight .token.url,
+.yll-code-twilight .language-css .token.string,
+.yll-code-twilight .style .token.string,
+.yll-code-twilight .token.variable,
+.yll-code-twilight .token.inserted {
+  color: hsl(76, 21%, 52%);
+  /* #8F9D6A */
+}
+
+.yll-code-twilight .token.atrule {
+  color: hsl(218, 22%, 55%);
+  /* #7587A6 */
+}
+
+.yll-code-twilight .token.regex,
+.yll-code-twilight .token.important {
+  color: hsl(42, 75%, 65%);
+  /* #E9C062 */
+}
+
+.yll-code-twilight .token.important,
+.yll-code-twilight .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-twilight .token.italic {
+  font-style: italic;
+}
+
+.yll-code-twilight .token.entity {
+  cursor: help;
+}
+
+.yll-code-twilight .language-markup .token.tag,
+.yll-code-twilight .language-markup .token.attr-name,
+.yll-code-twilight .language-markup .token.punctuation {
+  color: hsl(33, 33%, 52%);
+  /* #AC885B */
+}
+
+.yll-code-twilight .token {
+  position: relative;
+  z-index: 1;
+}
+
+.yll-code-twilight .line-highlight.line-highlight {
+  background: hsla(0, 0%, 33%, 0.25);
+  /* #545454 */
+  background: linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 70%, hsla(0, 0%, 33%, 0));
+  /* #545454 */
+  border-bottom: 1px dashed hsl(0, 0%, 33%);
+  /* #545454 */
+  border-top: 1px dashed hsl(0, 0%, 33%);
+  /* #545454 */
+  margin-top: 0.75em;
+  /* Same as .prism’s padding-top */
+  z-index: 0;
+}
+
+.yll-code-twilight .line-highlight.line-highlight:before,
+.yll-code-twilight .line-highlight.line-highlight[data-end]:after {
+  background-color: hsl(215, 15%, 59%);
+  /* #8794A6 */
+  color: hsl(24, 20%, 95%);
+  /* #F5F2F0 */
+}
+
+
+
+
+/**
+ * prism.js Dark theme for JavaScript, CSS and HTML
+ * Based on the slides of the talk “/Reg(exp){2}lained/”
+ * @author Lea Verou
+ */
+
+.yll-code-dark code[class*="language-"],
+.yll-code-dark pre[class*="language-"] {
+  color: white;
+  background: none;
+  text-shadow: 0 -0.1em 0.2em black;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+@media print {
+
+  .yll-code-dark code[class*="language-"],
+  .yll-code-dark pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+.yll-code-dark pre[class*="language-"],
+.yll-code-dark :not(pre)>code[class*="language-"] {
+  background: hsl(30, 20%, 25%);
+}
+
+.yll-code-dark pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border: 0.3em solid hsl(30, 20%, 40%);
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 0.5em black inset;
+}
+
+.yll-code-dark :not(pre)>code[class*="language-"] {
+  padding: 0.15em 0.2em 0.05em;
+  border-radius: 0.3em;
+  border: 0.13em solid hsl(30, 20%, 40%);
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  white-space: normal;
+}
+
+.yll-code-dark .token.comment,
+.yll-code-dark .token.prolog,
+.yll-code-dark .token.doctype,
+.yll-code-dark .token.cdata {
+  color: hsl(30, 20%, 50%);
+}
+
+.yll-code-dark .token.punctuation {
+  opacity: 0.7;
+}
+
+.yll-code-dark .token.namespace {
+  opacity: 0.7;
+}
+
+.yll-code-dark .token.property,
+.yll-code-dark .token.tag,
+.yll-code-dark .token.boolean,
+.yll-code-dark .token.number,
+.yll-code-dark .token.constant,
+.yll-code-dark .token.symbol {
+  color: hsl(350, 40%, 70%);
+}
+
+.yll-code-dark .token.selector,
+.yll-code-dark .token.attr-name,
+.yll-code-dark .token.string,
+.yll-code-dark .token.char,
+.yll-code-dark .token.builtin,
+.yll-code-dark .token.inserted {
+  color: hsl(75, 70%, 60%);
+}
+
+.yll-code-dark .token.operator,
+.yll-code-dark .token.entity,
+.yll-code-dark .token.url,
+.yll-code-dark .language-css .token.string,
+.yll-code-dark .style .token.string,
+.yll-code-dark .token.variable {
+  color: hsl(40, 90%, 60%);
+}
+
+.yll-code-dark .token.atrule,
+.yll-code-dark .token.attr-value,
+.yll-code-dark .token.keyword {
+  color: hsl(350, 40%, 70%);
+}
+
+.yll-code-dark .token.regex,
+.yll-code-dark .token.important {
+  color: #e90;
+}
+
+.yll-code-dark .token.important,
+.yll-code-dark .token.bold {
+  font-weight: bold;
+}
+
+.yll-code-dark .token.italic {
+  font-style: italic;
+}
+
+.yll-code-dark .token.entity {
+  cursor: help;
+}
+
+.yll-code-dark .token.deleted {
+  color: red;
+}
