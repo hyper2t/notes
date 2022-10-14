@@ -5,7 +5,8 @@
 # Notes <small>Cloud Native</small>
 
 > 基于 Obsidian+Docsify+Github Pages 的个人知识库
-[![github](https://img.shields.io/badge/github-babeltower-brightgreen.svg)](https://github.com/hyper2t/notes) 
+
+[![github](https://img.shields.io/badge/github-hyper2t-brightgreen.svg)](https://github.com/hyper2t/notes) 
 
 <br>
 
