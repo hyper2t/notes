@@ -12,11 +12,95 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      themeColor: '#76becc',
+      name: '云原生学习笔记',
+      repo: 'https://github.com/hyper2t',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: false,
+        crossChapterText: true,
+      },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 数学公式插件 -->
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+  <!-- 分页导航插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- 代码高亮插件 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-python.min.js"></script>
+
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>  -->
+  <!-- This is the source code of the pdf embed plugin -->
+  <!-- <script src="path-to-file/docsify-pdf-embed.js"></script> -->
+  <!-- or use this if you are not hosting the file yourself -->
+  <!-- <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script> -->
+
+  <!-- 搜索功能 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/search.min.js"></script>
+
+  <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <!--Live-2D看板娘模型 -->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+
+  <!--Live-2D看板娘模型 -->
+  <script type="text/javascript">
+      //Live-2D看板娘模型
+      L2Dwidget.init({
+          model: {
+              //jsonpath控制显示那个小萝莉模型，下面这个就是我觉得最可爱的小萝莉模型 //hijiki  //izumi //shizuku //koharu
+              jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json", //这里改模型，前面后面都要改
+              scale: 1,
+          },
+          display: {
+              position: "right", //设置看板娘的上下左右位置
+              width: 60,  //小萝莉的宽度
+              height: 100, //小萝莉的高度
+              hOffset: 10,  //水平偏移
+              vOffset: -20  //垂直偏移
+          },
+          mobile: {
+              show: false,  //在移动端不显示
+              scale: 0.4    //移动设备上的缩放
+          },
+          react: {
+              opacityDefault: 0.9, //设置透明度
+              opacityOnHover: 0.2
+          },
+      });
+</script>
 </body>
 </html>
