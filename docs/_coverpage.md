@@ -23,6 +23,7 @@
 - Gopher
 - 云原生
 
+[Blog](https://hyper2t.github.io/)
 [Get Started](README.md)
 
 <!-- 背景图片 -->
