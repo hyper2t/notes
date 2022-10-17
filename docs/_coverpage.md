@@ -8,7 +8,7 @@
 
 [![github](https://img.shields.io/badge/github-hyper2t-brightgreen.svg)](https://github.com/hyper2t/notes) 
 
-<br>
+<!-- <br>
 
 <span id="busuanzi_container_site_pv" style='display:none'>
     👀 访问量：<span id="busuanzi_value_site_pv"></span> 次
@@ -17,7 +17,7 @@
     | 🚴‍♂️ 访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
-<br>
+<br> -->
 
 - 退役沃特卢er
 - Gopher
@@ -27,5 +27,4 @@
 [Get Started](README.md)
 
 <!-- 背景图片 -->
-
 ![](_media/bg.jpg)

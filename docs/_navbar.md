@@ -27,5 +27,5 @@
 * 监控
     * [prometheus](prometheus/README.md)
 
-* [dapr](dapr/README.md)
-* [首页](README.md)
+* 分布式应用程序运行时
+    * [dapr](dapr/README.md)
